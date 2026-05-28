@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Para Micaela</title>
+  <link rel="stylesheet" href="./style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+ 
+  <canvas id="bg-canvas"></canvas>
+ 
+  <!-- TELA INTRO -->
+  <div id="screen-intro" class="screen active">
+    <div class="intro-wrap">
+      <p class="intro-from">uma mensagem de <span class="name-jhon">Jhonathan</span></p>
+      <h1 class="intro-title">Para<br/><em>Micaela</em> 🌙</h1>
+      <p class="intro-desc">O céu guarda estrelas esperando por você.<br/>Colete-as antes que caiam e descubra o que<br/>o universo preparou… ✨</p>
+      <button id="btn-start" class="btn-pill">Jogar Agora</button>
+      <div class="intro-stars-row">
+        <span>⭐</span><span>🌟</span><span>✨</span><span>💫</span><span>⭐</span>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- TELA JOGO -->
+  <div id="screen-game" class="screen">
+    <div class="hud">
+      <div class="hud-item">
+        <span class="hud-label">Estrelas</span>
+        <span id="hud-score" class="hud-val">0</span>
+      </div>
+      <div class="hud-item hud-center">
+        <span id="hud-combo" class="combo-text"></span>
+      </div>
+      <div class="hud-item hud-right">
+        <span class="hud-label">Tempo</span>
+        <span id="hud-time" class="hud-val">60</span>
+      </div>
+    </div>
+ 
+    <div id="game-area">
+      <!-- estrelas geradas por JS -->
+    </div>
+ 
+    <div id="constellation-bar">
+      <div id="const-label">Constelação da Micaela</div>
+      <div id="const-dots"></div>
+    </div>
+ 
+    <div id="power-bar-wrap">
+      <div id="power-bar"></div>
+      <span id="power-label">✨ Magia</span>
+    </div>
+ 
+    <div id="magic-btn-wrap">
+      <button id="btn-magic" class="btn-magic" disabled>💫 Chuva Mágica!</button>
+    </div>
+  </div>
+ 
+  <!-- TELA FINAL -->
+  <div id="screen-end" class="screen">
+    <div class="end-wrap">
+      <div id="end-constellation"></div>
+      <h2 class="end-title">Você é incrível,<br/><em>Micaela!</em> 🌟</h2>
+      <p class="end-score-line">Você coletou <strong id="end-score-val">0</strong> estrelas</p>
+      <div class="end-message" id="end-msg"></div>
+      <p class="end-sign">— com carinho, <span class="name-jhon">Jhonathan</span> 💙</p>
+      <button id="btn-replay" class="btn-pill btn-pill-sm">Jogar de novo ✨</button>
+    </div>
+  </div>
+ 
+  <!-- FLOAT TEXT CONTAINER -->
+  <div id="floats"></div>
+ 
+  <script src="./script.js"></script>
+</body>
+</html>
